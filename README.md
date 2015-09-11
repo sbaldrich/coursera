@@ -5,6 +5,7 @@ This repository contains my work for various Coursera courses.
 ## Contents
 
 * rprog : [R Programming](https://class.coursera.org/rprog-031)
+* getdata: [Getting and Cleaning Data](https://class.coursera.org/getdata-032)
 
 ## README
 

@@ -1,3 +1,5 @@
+.DS_Store
+
 # History files
 .Rhistory
 .Rapp.history
@@ -14,4 +16,5 @@ vignettes/*.pdf
 
 # Assignment files
 specdata
-.DS_Store
+getdata/data
+.RData
