@@ -75,8 +75,12 @@ q5 <- function(){
   approach2 <- replicate(times, system.time({mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)})["user.self"])
   approach3 <- replicate(times, system.time({sapply(split(DT$pwgtp15,DT$SEX),mean)})["user.self"])
   approach4 <- replicate(times, system.time({DT[,mean(pwgtp15),by=SEX]})["user.self"])
-  approach5 <- replicate(times, system.time({mean(DT$pwgtp15,by=DT$SEX)})["user.self"])
   approach6 <- replicate(times, system.time({tapply(DT$pwgtp15,DT$SEX,mean)})["user.self"])
+  
+  approach2_av <- cumsum(approach2) / seq_along(approach2)
+  approach3_av <- cumsum(approach3) / seq_along(approach3)
+  approach4_av <- cumsum(approach4) / seq_along(approach4)
+  approach6_av <- cumsum(approach6) / seq_along(approach6)
   
   topY = max(approach2, approach3, approach4, approach6) 
   lowY = min(approach2, approach3, approach4, approach6) 
