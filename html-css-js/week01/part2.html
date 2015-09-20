@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  fieldset{
+    border: 10px solid yellow;
+    background-color: lightyellow;
+    margin-bottom: 10px;
+    width: 720px;
+  }
+  label{
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width:180px;
+
+  }
+  input[type='range']{
+    text-align: center;
+  }
+  textarea{
+    width: 360px;
+    height: 50px;
+  }
+  .auto{
+    width: auto;
+  }
+  .rangeleft, .rangeright{
+    text-align: center;
+    margin:5px;
+    padding: 1px 3px 1px 3px;
+    font-family: arial;
+    color: white;
+  }
+  .rangeleft{
+    background-color: red;
+  }
+  .rangeright{
+    background-color: purple;
+  }
+  </style>
+</head>
+<body>
+  <h1>Please Enter Your Details For Our Dating Website!</h1>
+
+  <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Your face</legend>
+      <label for="avatar">Your image:</label>
+      <input name="avatar" type="file" required><br/>
+      <label for="preview">Image preview:</label>
+      <img name="preview" id="preview">
+    </fieldset>
+
+    <fieldset>
+      <legend>Your general details</legend>
+      <label for="name">Name:</label>
+      <input type="text" placeholder="Your full name" required><br/>
+      <label class="auto" for="gender">Gender:</label>
+      <input type="radio" name="gender" value="Male" checked required>Male
+      <input type="radio" name="gender" value="Female" required>Female<br/>
+      <label for="age">Age:</label>
+      <input type="number" name="age" min="18" required><br/>
+      <label for="date">Date of birth:</label>
+      <input type="date"><br/>
+      <label for="color">Favorite color</label>
+      <input type="color" ><br/>
+      <label for="country">Which Country:</label>
+      <select name="country" >
+        <option>N/A</option>
+        <option>Afghanistan</option>
+        <option>Albania</option>
+        <option>Algeria</option>
+        <option>Andorra</option>
+        <option>Angola</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your indicators</legend>
+      <label for="height">Height: </label><span class="rangeleft">Short</span><input name="height" type="range" min="0" max="100"><span class="rangeright">Tall</span><br/>
+      <label for="height">Salary: </label><span class="rangeleft">Poor</span><input type="range" min="0" max="100"><span class="rangeright">Rich</span><br/>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your contact information</legend>
+      <label for="email">Email:</label>
+      <input name="email" type="email" required><br/>
+      <label for="tel">Mobile:</label>
+      <input type="tel" name="tel"><br/>
+      <label for="address">Address:</label>
+      <textarea name="address"></textarea><br/>
+      <label class="auto" for="contact">Method to contact you</label>
+      <input type="checkbox" name="contact">Email</input>
+      <input type="checkbox" name="contact">Whatsapp</input>
+      <input type="checkbox" name="contact">In-app chat</input>
+    </fieldset>
+    <input type="submit">
+
+
+  </form>
+</body>
+
+
+</html>

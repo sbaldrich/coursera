@@ -6,6 +6,7 @@ This repository contains my work for various Coursera courses.
 
 * rprog : [R Programming](https://class.coursera.org/rprog-031)
 * getdata: [Getting and Cleaning Data](https://class.coursera.org/getdata-032)
+* html-css-js: [HTML, CSS & Javascript](https://https://www.coursera.org/learn/html-css-javascript/home/welcome)
 
 ## README
 
