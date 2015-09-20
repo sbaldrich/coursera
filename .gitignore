@@ -14,6 +14,11 @@
 vignettes/*.html
 vignettes/*.pdf
 
+# Data files
+*.csv
+*.pdf
+
+
 # Assignment files
 specdata
 getdata/data
